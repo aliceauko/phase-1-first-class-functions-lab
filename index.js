@@ -26,13 +26,23 @@ function fareDoubler(fare) {
     return fare * 3;
   }
 
-  function selectDifferentDrivers(drivers, fun){
+  /*function selectDifferentDrivers(drivers, fun){
     return fun(drivers);
+} */
+
+
+
+const fun = returnFirstTwoDrivers || returnLastTwoDrivers
+
+
+function selectDifferentDrivers(drivers, fun) {
+    if (fun === returnFirstTwoDrivers) {
+        return returnFirstTwoDrivers(drivers);
+    }
+    else {
+        return returnLastTwoDrivers(drivers)
+    }
 }
-
-
-
-
 
 
 
